@@ -1,0 +1,12 @@
+.dashboard {
+    padding: 25px;
+    margin: auto;
+    width: 750px;
+}
+
+.row-title {
+    font-size: 55px;
+    text-align: center;
+    font-variant: all-small-caps;
+}
+

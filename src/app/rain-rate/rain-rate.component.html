@@ -1,0 +1,16 @@
+<div class=container>
+<ngx-gauge 
+    [type]=gaugeType
+    [value]=value
+    [max]="0"
+    [min]="25"
+    [thick]=15
+    [thresholds]=thresholdConfig
+    [size] = 250
+    >
+    <ngx-gauge-value>
+      {{value}} {{append}}
+  </ngx-gauge-value>
+</ngx-gauge>
+<div class="label" >{{label}}</div>
+</div>
