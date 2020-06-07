@@ -1,11 +1,11 @@
 .dashboard {
-    padding: 25px;
     margin: auto;
-    width: 750px;
+    width: 100%;
     font-family: sans-serif;
 }
 
 .row-title {
+    margin-top: 32px;
     font-size: 55px;
     text-align: center;
     font-variant: all-small-caps;
@@ -18,6 +18,22 @@
 
 .row {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
+  }
+  
+  .row > * {
+    box-sizing: border-box;
+  }
+  .row > *:not(:last-child) {
+    /* margin-right: 32px; */
+  }
+  /* Item sizing */
+  .row {
+    flex: 0 1 calc(25% - 32px);
+  }
+ 
+  slide-toggle {
+    margin-top: 32px;
+  }
