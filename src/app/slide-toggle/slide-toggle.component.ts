@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Renderer2, RendererFactory2 } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'slide-toggle',
@@ -7,24 +7,16 @@ import { Component, OnInit, Input, Renderer2, RendererFactory2 } from '@angular/
 })
 export class SlideToggleComponent implements OnInit {
 
-  private renderer: Renderer2;
-
-  constructor(private factory: RendererFactory2) {
-    this.renderer = factory.createRenderer(null, null)
-  }
-
+  @Output() toggle: EventEmitter<boolean> = new EventEmitter();
   @Input() on: boolean;
 
+  constructor() {}
   onClick() {
-    if (!this.on) {
-      this.renderer.addClass(document.body, "dark-mode")
-    }
-    else {
-      this.renderer.removeClass(document.body, "dark-mode")
-    }
+    this.toggle.emit(this.on)
   }
 
   ngOnInit(): void {
+
   }
 
 }

@@ -1,16 +1,3 @@
-<!-- <div class=dashboard>
-<div class=row-title>Outside</div>
-    <app-temperature
-    [value] = temperature
-    ></app-temperature>
-    <app-humidity
-    [value] = humidity>
-    </app-humidity>
-    <app-rain-rate
-    [value] = rainRate></app-rain-rate>
-</div> -->
-
-
 <div class=dashboard *ngFor="let d of data">
     <div class=row-title>{{d.location.type}}</div>
     <div class=row-subtitle>{{d.location.name}}</div>
@@ -22,4 +9,4 @@
         <app-rain-rate *ngIf="d.metrics.rainRate" [value]=d.metrics.rainRate></app-rain-rate>
     </div>
 </div>
-<div class="row"><slide-toggle></slide-toggle></div>
+<div class="row"><slide-toggle (toggle)="onToggle($event)" [on]="darkMode"></slide-toggle></div>
