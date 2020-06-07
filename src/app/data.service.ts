@@ -3,16 +3,32 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-export class Data {
+export class OldData {
   temperature: string
   humidity: string
   rainRate: string
 }
 
+export class Location {
+
+}
+export class Metrics {
+  temperature: string
+  humidity: string
+  rainRate: string
+  windSpeed: string
+  windDirection: string
+}
+
+export class Data {
+  location: Location
+  metrics: Metrics
+}
+
 @Injectable()
 export class DataService {
   // configUrl = "./assets/data.json";
-  configUrl = "http://www.vittoriocurcio.com/weewx/data.json";
+  configUrl = "/assets/data.json";
 
 
   constructor(private http: HttpClient) {  
@@ -23,8 +39,8 @@ export class DataService {
     return this.http.get<string>(this.configUrl).toPromise()
   }
 
-  getData(): Promise<Data> {
-     return this.http.get<Data>(this.configUrl).toPromise()
+  getData(): Promise<Data[]> {
+     return this.http.get<Data[]>(this.configUrl).toPromise()
   }
 
 }

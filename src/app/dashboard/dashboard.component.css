@@ -2,6 +2,7 @@
     padding: 25px;
     margin: auto;
     width: 750px;
+    font-family: sans-serif;
 }
 
 .row-title {
@@ -10,3 +11,12 @@
     font-variant: all-small-caps;
 }
 
+.row-subtitle {
+    font-size: 25px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}

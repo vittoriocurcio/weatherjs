@@ -1,0 +1,10 @@
+.container {
+    width: 250px;
+    display: inline-block;
+}
+
+.label {
+    text-align: center;
+    font-size: x-large;
+}
+

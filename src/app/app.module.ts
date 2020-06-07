@@ -10,10 +10,11 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { RainRateComponent } from './rain-rate/rain-rate.component';
+import { WindComponent } from './wind/wind.component';
 
 @NgModule({
   declarations: [
-    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent
+    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent
   ],
   imports: [
     BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule
