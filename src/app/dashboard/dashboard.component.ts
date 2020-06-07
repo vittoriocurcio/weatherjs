@@ -43,7 +43,6 @@ export class DashboardComponent implements OnInit {
   }
 
   onToggle(on: boolean) {
-    console.log('toggle something else', on);
     if (on) {
       this.disableDarkMode()
     }

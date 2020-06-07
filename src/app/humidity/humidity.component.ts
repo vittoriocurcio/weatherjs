@@ -15,13 +15,11 @@ export class HumidityComponent implements OnInit {
   label = "Humidity"
 
   thresholdConfig = {
-    '-20': { color: 'blue' },
-    '-10': { color: 'lightblue' },
-    '0': { color: 'lightgreen' },
-    '10': { color: 'green' },
-    '20': { color: 'yellow' },
-    '30': { color: 'orange' },
-    '40': { color: 'red' },
+    '0': {color: 'red'},
+    '15': {color: 'orange'},
+    '35': {color: 'green'},
+    '65': {color: 'orange'},
+    '85': {color: 'red'}
   };
 
   ngOnInit(): void {
