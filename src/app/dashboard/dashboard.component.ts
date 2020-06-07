@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { DataService, Data } from '../data.service'
 
 
@@ -10,7 +10,8 @@ import { DataService, Data } from '../data.service'
 export class DashboardComponent implements OnInit {
 
   data: Data[]
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) { 
+  }
 
   ngOnInit(): void {
     this.dataService.getData().then(
@@ -20,10 +21,11 @@ export class DashboardComponent implements OnInit {
           d.metrics.temperature = d.metrics.temperature.match("[0-9]+\.[0-9]+")[0];
           d.metrics.humidity = d.metrics.humidity.match("[0-9]+")[0]
           d.metrics.rainRate = this.extractRainRate(d.metrics.rainRate)
-          d.metrics.windSpeed = d.metrics.windSpeed.match("[0-9]+\.[0-9]+")[0]
+          d.metrics.windSpeed = d.metrics.windSpeed?.match("[0-9]+\.[0-9]+")[0] 
         });
       }
     )
+    
   }
 
   extractRainRate(rainRate: string): string {

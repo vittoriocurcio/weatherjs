@@ -11,13 +11,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { RainRateComponent } from './rain-rate/rain-rate.component';
 import { WindComponent } from './wind/wind.component';
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent
+    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent, SlideToggleComponent
   ],
   imports: [
-    BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule
+    BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule, FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
