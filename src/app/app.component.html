@@ -1,4 +1,19 @@
-<!-- <app-top-bar></app-top-bar> -->
-
-<app-dashboard></app-dashboard>
-<!-- <app-temperature></app-temperature> -->
+<div class="mat-app-background" [ngClass]="{'dark-theme': isDarkTheme | async}">
+    <div class="content">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Current"><app-dashboard></app-dashboard></mat-tab>
+            <mat-tab label="Today">Under Construction </mat-tab>
+            <mat-tab label="Yesterday">Working...</mat-tab>
+        </mat-tab-group>
+        <div class="dark-toggle">
+            <mat-slide-toggle
+                [labelPosition]="before"
+                [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">
+                Dark mode
+            </mat-slide-toggle>
+        </div>
+    </div>
+    <footer class="footer">
+        <div><p>Some footer information</p></div>
+    </footer>
+</div>

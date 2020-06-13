@@ -12,7 +12,7 @@ export class SlideToggleComponent implements OnInit {
 
   constructor() {}
   onClick() {
-    this.toggle.emit(this.on)
+    this.toggle.emit(this.on);
   }
 
   ngOnInit(): void {

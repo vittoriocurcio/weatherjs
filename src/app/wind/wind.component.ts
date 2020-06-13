@@ -9,49 +9,49 @@ export class WindComponent implements OnInit {
 
   constructor() { }
 
-  gaugeType = "arch"
-  label = "Wind"
-  max = 10
-  @Input() value: number
-  @Input() direction: string
+  gaugeType = 'arch';
+  label = 'Wind';
+  max = 10;
+  @Input() value: number;
+  @Input() direction: string;
 
   thresholdConfig = {
     '-20': { color: 'blue' },
     '-10': { color: 'lightblue' },
-    '0': { color: 'lightgreen' },
-    '10': { color: 'green' },
-    '20': { color: 'yellow' },
-    '30': { color: 'orange' },
-    '40': { color: 'red' },
+    0: { color: 'lightgreen' },
+    10: { color: 'green' },
+    20: { color: 'yellow' },
+    30: { color: 'orange' },
+    40: { color: 'red' },
   };
-  append = "m/s";
+  append = 'm/s';
 
   ngOnInit() {
     if (this.value > 10) {
-      this.max = 30
+      this.max = 30;
     }
-    this.direction = this.calculate_direction(this.direction)
+    this.direction = this.calculate_direction(this.direction);
   }
 
   calculate_direction(direction: string): string {
-    var dir = Math.floor(parseFloat(direction + 22.5) / 45)
+    const dir = Math.floor(parseFloat(direction + 22.5) / 45);
     switch (dir) {
       case 1:
-        return "NE";
+        return 'NE';
       case 2:
-        return "E"
+        return 'E';
       case 3:
-        return "SE"
+        return 'SE';
       case 4:
-        return "S"
+        return 'S';
       case 5:
-        return "SW"
+        return 'SW';
       case 6:
-        return "W"
+        return 'W';
       case 7:
-        return "NW"
+        return 'NW';
       default:
-        return "N"
+        return 'N';
     }
   }
 }
