@@ -19,17 +19,19 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ThemeService} from './core/services/theme.service';
+import { FooterComponent } from './footer/footer.component';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent, SlideToggleComponent
+    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent, SlideToggleComponent, FooterComponent
   ],
   imports: [
     BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule,
-    FormsModule, BrowserAnimationsModule, MatSlideToggleModule, MatTabsModule, MatToolbarModule
+    FormsModule, BrowserAnimationsModule, MatSlideToggleModule, MatTabsModule, MatToolbarModule, MatBottomSheetModule
   ],
   providers: [DataService, ThemeService],
   bootstrap: [AppComponent]

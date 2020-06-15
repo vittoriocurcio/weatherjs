@@ -1,0 +1,26 @@
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 1 calc(25% - 32px);
+}
+
+.footer-content > * {
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .footer-button {
+    border: 0px;
+    background: transparent;
+    display: flex;
+    font-size: inherit;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  .footer-button:focus {
+    outline: transparent; 
+  }
