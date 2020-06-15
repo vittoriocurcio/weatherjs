@@ -26,10 +26,7 @@
   .row > * {
     box-sizing: border-box;
   }
-  .row > *:not(:last-child) {
-    /* margin-right: 32px; */
-  }
-  /* Item sizing */
+ 
   .row {
     flex: 0 1 calc(25% - 32px);
   }
