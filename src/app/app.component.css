@@ -5,8 +5,34 @@
 .dark-toggle{
     justify-content: center;
     display: flex;
-    padding-top: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 0px;
+    left: 0px;
 }
 
-
+.full-tab {
+    width: 100%;
+}
   
+.tab-content {
+    overflow: auto;
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    right: 0px;
+    left: 0px;
+}
+
+.content {
+    flex: 1 0 auto;
+    overflow: hidden;
+ 
+  }
+  
+.footer {
+    bottom: 0;
+    position: fixed; 
+    right: 0px;
+    left: 0px;   
+  }

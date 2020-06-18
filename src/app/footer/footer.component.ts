@@ -15,8 +15,8 @@ export class FooterComponent implements OnInit {
   }
 
   openBottomSheet(page: string): void {
-    var config = new MatBottomSheetConfig()
-    config.data = page
+    const config = new MatBottomSheetConfig();
+    config.data = page;
     switch (page) {
       case 'about':
         this._bottomSheet.open(AboutBottom, config);
@@ -25,7 +25,7 @@ export class FooterComponent implements OnInit {
           this._bottomSheet.open(ImpressumBottom, config);
           break;
     }
-   
+
   }
 }
 @Component({
@@ -34,7 +34,7 @@ export class FooterComponent implements OnInit {
 })
 export class AboutBottom {
   constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
-    console.log(this.data)
+    console.log(this.data);
   }
 
 }
@@ -44,7 +44,7 @@ export class AboutBottom {
 })
 export class ImpressumBottom {
   constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
-    console.log(this.data)
+    console.log(this.data);
   }
 
 }
@@ -55,7 +55,7 @@ export class ImpressumBottom {
 })
 export class BottomSheetOverviewExampleSheet {
   constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
-    console.log(this.data)
+    console.log(this.data);
   }
 
 }

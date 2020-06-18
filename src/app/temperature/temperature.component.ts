@@ -24,7 +24,7 @@ export class TemperatureComponent implements OnInit {
     30: { color: 'orange' },
     40: { color: 'red' },
   };
-  append = '°';
+  append = '°C';
 
   ngOnInit() {
 

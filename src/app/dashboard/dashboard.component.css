@@ -4,6 +4,9 @@
     font-family: sans-serif;
 }
 
+.dashboard:first-child > .row-title {
+    margin-top: -10px;
+}
 .row-title {
     margin-top: 32px;
     font-size: 55px;
@@ -26,10 +29,7 @@
   .row > * {
     box-sizing: border-box;
   }
-  .row > *:not(:last-child) {
-    /* margin-right: 32px; */
-  }
-  /* Item sizing */
+ 
   .row {
     flex: 0 1 calc(25% - 32px);
   }
