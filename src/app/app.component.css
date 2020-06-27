@@ -17,11 +17,9 @@
   
 .tab-content {
     overflow: auto;
-    position: fixed;
+    height: 70vh;
+    max-height: 80vh;
     top: 50px;
-    bottom: 50px;
-    right: 0px;
-    left: 0px;
 }
 
 .content {
