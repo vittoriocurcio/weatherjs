@@ -1,7 +1,7 @@
 <div class=dashboard *ngFor="let d of data">
     <div class=row-title>{{d.location.type}}</div>
-    <div class=row-subtitle>{{d.location.name}}</div>
-    <div class=row-subtitle>{{d.timestamp}}</div>
+    <div class=row-location>{{d.location.name}}</div>
+    <div class=row-time>{{d.timestamp}}</div>
     <div class=row>
         <app-temperature [value]=d.metrics.temperature></app-temperature>
         <app-humidity [value]=d.metrics.humidity>

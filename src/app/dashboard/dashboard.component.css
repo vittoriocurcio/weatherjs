@@ -5,7 +5,7 @@
 }
 
 .dashboard:first-child > .row-title {
-    margin-top: -10px;
+    margin-top: 0;
 }
 .row-title {
     margin-top: 32px;
@@ -14,10 +14,15 @@
     font-variant: all-small-caps;
 }
 
-.row-subtitle {
+.row-location {
     font-size: 25px;
     text-align: center;
 }
+.row-time {
+  font-size: 15px;
+  text-align: center;
+}
+
 
 .row {
     display: flex;
