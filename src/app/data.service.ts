@@ -21,6 +21,7 @@ export class Metrics {
 }
 
 export class Data {
+  timestamp: string;
   location: Location;
   metrics: Metrics;
 }
@@ -28,12 +29,10 @@ export class Data {
 @Injectable()
 export class DataService {
   configUrl = 'http://www.vittoriocurcio.com/weewx/current.json';
-  // configUrl = '/assets/data.json';
 
   constructor(private http: HttpClient) {
   }
 
-  temperature = -2;
   getString(): Promise<string> {
     return this.http.get<string>(this.configUrl).toPromise();
   }
