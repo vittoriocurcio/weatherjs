@@ -9,7 +9,7 @@ import {MatBottomSheet, MatBottomSheetRef, MatBottomSheetConfig, MAT_BOTTOM_SHEE
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private _bottomSheet: MatBottomSheet) { }
+  constructor(private bottomSheet: MatBottomSheet) { }
 
   ngOnInit(): void {
   }
@@ -19,11 +19,11 @@ export class FooterComponent implements OnInit {
     config.data = page;
     switch (page) {
       case 'about':
-        this._bottomSheet.open(AboutBottom, config);
+        this.bottomSheet.open(AboutBottom, config);
         break;
-        case 'impressum':
-          this._bottomSheet.open(ImpressumBottom, config);
-          break;
+      case 'impressum':
+        this.bottomSheet.open(ImpressumBottom, config);
+        break;
     }
 
   }
@@ -33,7 +33,7 @@ export class FooterComponent implements OnInit {
   templateUrl: 'about.html',
 })
 export class AboutBottom {
-  constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
+  constructor(private bottomSheetRef: MatBottomSheetRef<AboutBottom>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
     console.log(this.data);
   }
 
@@ -43,19 +43,9 @@ export class AboutBottom {
   templateUrl: 'impressum.html',
 })
 export class ImpressumBottom {
-  constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
+  constructor(private bottomSheetRef: MatBottomSheetRef<ImpressumBottom>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
     console.log(this.data);
   }
 
 }
 
-@Component({
-  selector: 'bottom-sheet-overview-example-sheet',
-  templateUrl: 'bottom-sheet-overview-example-sheet.html',
-})
-export class BottomSheetOverviewExampleSheet {
-  constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
-    console.log(this.data);
-  }
-
-}
