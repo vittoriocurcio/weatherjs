@@ -14,18 +14,12 @@
 .full-tab {
     width: 100%;
 }
-  
-.tab-content {
-    overflow: auto;
-    height: 70vh;
-    max-height: 80vh;
-    top: 50px;
-}
 
 .content {
+    margin-top: 10px;
     flex: 1 0 auto;
-    overflow: hidden;
- 
+    overflow: auto;
+    height: 80%;
   }
   
 .footer {

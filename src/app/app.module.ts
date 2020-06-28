@@ -21,6 +21,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ThemeService} from './core/services/theme.service';
 import { FooterComponent } from './footer/footer.component';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -31,7 +32,7 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
   ],
   imports: [
     BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule,
-    FormsModule, BrowserAnimationsModule, MatSlideToggleModule, MatTabsModule, MatToolbarModule, MatBottomSheetModule
+    FormsModule, BrowserAnimationsModule, MatSlideToggleModule, MatTabsModule, MatToolbarModule, MatBottomSheetModule, AppRoutingModule
   ],
   providers: [DataService, ThemeService],
   bootstrap: [AppComponent]
