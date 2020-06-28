@@ -27,8 +27,8 @@ export class Data {
 
 @Injectable()
 export class DataService {
-  configUrl = "http://www.vittoriocurcio.com/weewx/current.json";
-  //configUrl = '/assets/data.json';
+  configUrl = 'http://www.vittoriocurcio.com/weewx/current.json';
+  // configUrl = '/assets/data.json';
 
   constructor(private http: HttpClient) {
   }

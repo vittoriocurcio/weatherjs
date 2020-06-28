@@ -4,6 +4,9 @@
     font-family: sans-serif;
 }
 
+.dashboard:first-child > .row-title {
+    margin-top: -10px;
+}
 .row-title {
     margin-top: 32px;
     font-size: 55px;

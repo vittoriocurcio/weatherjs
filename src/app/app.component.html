@@ -1,8 +1,8 @@
 <div class="mat-app-background" [ngClass]="{'dark-theme': isDarkTheme | async}">
     <div class="content">
-        <mat-tab-group mat-align-tabs="center" selectedIndex=1>
+        <mat-tab-group mat-align-tabs="center" selectedIndex=1 dynamicHeight=false>
             <mat-tab label="Home"><img class="full-tab" src="./assets/images/UnderConstruction.png"></mat-tab>
-            <mat-tab label="Current" isActive="true"><app-dashboard></app-dashboard></mat-tab>
+            <mat-tab label="Current" isActive="true"><div class="tab-content"><app-dashboard></app-dashboard></div></mat-tab>
             <mat-tab label="Today"><img class="full-tab" src="./assets/images/UnderConstruction.png"></mat-tab>
             <mat-tab label="Yesterday"><img class="full-tab" src="./assets/images/UnderConstruction.png"></mat-tab>
         </mat-tab-group>
@@ -14,7 +14,5 @@
             </mat-slide-toggle>
         </div>
     </div>
-    <footer class="footer">
-        <div><p></p></div>
-    </footer>
+    <app-footer class="footer"></app-footer>
 </div>
