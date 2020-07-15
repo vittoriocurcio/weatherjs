@@ -19,6 +19,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
     @include angular-material-theme($dark-theme);
   }
 
-  .dark-theme > .footer > .footer-content > * {
+  .dark-theme > .footer > * >  .footer-content > * {
       color: white;
   }

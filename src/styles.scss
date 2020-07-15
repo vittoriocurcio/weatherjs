@@ -1,18 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/material-theme';
 
-
 .dark-mode {
     color: #cccccc;
     background-color: #333333;
 }
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
-  .mat-app-background{
-    height: 100%;
-  }
+.mat-app-background{
+  height: 100%;
+  overflow: hidden;
+}
 
   
 
