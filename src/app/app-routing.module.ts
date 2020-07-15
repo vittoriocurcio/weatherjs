@@ -7,9 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: '', redirectTo: '/current', pathMatch: 'full' },
   { path: 'home', component: DashboardComponent },
-  { path: 'current', component:  DashboardComponent},
-  
-  // { path: 'third', component: Componenet3Component},
+  { path: 'current', component:  DashboardComponent},  
 ];
 export const appRouting = RouterModule.forRoot(routes);
 @NgModule({
