@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
         this.bottomSheet.open(AboutBottom, config);
         break;
       case 'impressum':
-        window.open("../impressum.html  ")
+        window.open('../impressum.html  ');
         break;
     }
 
