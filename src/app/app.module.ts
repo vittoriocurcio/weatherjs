@@ -22,13 +22,14 @@ import { ThemeService} from './core/services/theme.service';
 import { FooterComponent } from './footer/footer.component';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent, SlideToggleComponent, FooterComponent
+    AppComponent, TemperatureComponent, DashboardComponent, HumidityComponent, RainRateComponent, WindComponent, SlideToggleComponent, FooterComponent, HomeComponent
   ],
   imports: [
     BrowserModule, GaugeModule.forRoot(), HttpClientModule, NgxGaugeModule,

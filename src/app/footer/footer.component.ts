@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
         this.bottomSheet.open(AboutBottom, config);
         break;
       case 'impressum':
-        this.bottomSheet.open(ImpressumBottom, config);
+        window.open('../impressum.html  ');
         break;
     }
 
@@ -38,14 +38,3 @@ export class AboutBottom {
   }
 
 }
-@Component({
-  selector: 'app-impressum',
-  templateUrl: 'impressum.html',
-})
-export class ImpressumBottom {
-  constructor(private bottomSheetRef: MatBottomSheetRef<ImpressumBottom>, @Inject(MAT_BOTTOM_SHEET_DATA) public data: string) {
-    console.log(this.data);
-  }
-
-}
-

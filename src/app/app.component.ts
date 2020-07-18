@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   before = 'before';
   isDarkTheme: Observable<boolean>;
   navLinks: any[];
-  activeLinkIndex = -1; 
+  activeLinkIndex = -1;
 
-  constructor(private themeService: ThemeService, private router: Router) { 
+  constructor(private themeService: ThemeService, private router: Router) {
     this.navLinks = [
       {
           label: 'Home',
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       //     label: 'Third',
       //     link: './third',
       //     index: 2
-      }, 
+      },
   ];
   }
 
